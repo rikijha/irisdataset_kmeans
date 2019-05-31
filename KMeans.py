@@ -2,7 +2,7 @@
 """
 Created on Fri May 31 17:41:03 2019
 
-@author: Dell
+@author: Riki jha
 """
 
 import pandas as pd
@@ -13,6 +13,7 @@ dataset=pd.read_csv('Iris.csv')
 X=dataset.iloc[:,1:5].values
 wcss=[] #width cluster sum of squares
 
+#for determining the value of k elbow technique is used
 from sklearn.cluster import KMeans
 for i in range(1,10):
     k_means=KMeans(n_clusters=i,random_state=0)
